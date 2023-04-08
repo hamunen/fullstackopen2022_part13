@@ -7,6 +7,6 @@ CREATE TABLE blogs (
 );
 
 INSERT INTO blogs (author, url, title, likes) VALUES ('Gill Bates', 'microsoft.com', 'Hey guys whatsup', 6790);
-INSERT INTO blogs (author, url, title, likes) VALUES ('Henri Hamunen', 'myspace.com/coolguy', 'My blog', 12);
+INSERT INTO blogs (author, url, title, likes) VALUES ('Henri Hamunen', 'myspace.com/hackerman', 'My blog', 12);
 
 select * from blogs;

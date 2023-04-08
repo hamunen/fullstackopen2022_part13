@@ -1,0 +1,29 @@
+GET http://localhost:3001/api/blogs
+
+###
+
+POST http://localhost:3001/api/blogs HTTP/1.1
+Content-Type: application/json
+
+{
+  "author": "Gill Bates",
+  "url": "microsoft.com",
+  "title": "My new os",
+  "likes": 2
+}
+
+###
+
+POST http://localhost:3001/api/blogs HTTP/1.1
+Content-Type: application/json
+
+{
+  "author": "Henri Hamunen",
+  "url": "myspace.com/hackerman",
+  "title": "Whats up guys",
+  "likes": 4
+}
+
+###
+
+DELETE http://localhost:3001/api/blogs/5 HTTP/1.1

@@ -1,0 +1,10 @@
+# fly.toml file generated for fsopen-part13-blogapp on 2023-04-08T19:44:14+03:00
+
+app = "fsopen-part13-blogapp"
+primary_region = "arn"
+
+[build]
+  builder = "heroku/buildpacks:20"
+
+[env]
+  PORT = "8080"

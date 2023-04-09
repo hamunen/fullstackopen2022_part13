@@ -36,3 +36,26 @@ Content-Type: application/json
 {
   "alikes": 77
 }
+
+### users
+
+GET http://localhost:3001/api/users
+
+###
+
+POST http://localhost:3001/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "testguy",
+  "name": "Test Guy"
+}
+
+###
+
+PUT http://localhost:3001/api/users/testguy HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "tester"
+}

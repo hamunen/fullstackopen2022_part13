@@ -8,12 +8,14 @@ GET http://localhost:3001/api/blogs?search=H
 
 POST http://localhost:3001/api/blogs HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im90aGVyQG1pY3Jvc29mdC5jb20iLCJpZCI6MiwiaWF0IjoxNjgxMDQ5MjkyfQ.cEt05osNCF7UW1zr7xbRyoV4INVjaYWA-v0itetZ4Ho
 
 {
   "author": "Gill Bates",
   "url": "microsoft.com",
-  "title": "My new os",
-  "likes": 2
+  "title": "Still blogging in 2000",
+  "year": 2000,
+  "likes": 420
 }
 
 ###
@@ -23,9 +25,9 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RndXlAbWljcm9zb2Z0LmNvbSIsImlkIjoxLCJpYXQiOjE2ODEwNDYyMjd9.xOB8TX3bftjYotVvcwGz2oFf3BdKHBiZmGzqIldu1ew
 
 {
-  "author": "Alf",
-  "url": "myspace.com/alf",
-  "title": "MY BLOG 2",
+  "author": "Random guy",
+  "url": "myspace.com/dasdf",
+  "title": "MY BLOG 566",
   "year": 2023
 }
 
@@ -59,6 +61,17 @@ Content-Type: application/json
 
 ###
 
+POST http://localhost:3001/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "other@microsoft.com",
+  "name": "other Guy"
+}
+
+
+###
+
 PUT http://localhost:3001/api/users/testguy@microsoft.de HTTP/1.1
 Content-Type: application/json
 
@@ -78,6 +91,17 @@ Content-Type: application/json
 
 ###
 
+POST http://localhost:3001/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "other@microsoft.com",
+  "password": "secret"
+}
+
+
+###
+
 GET http://localhost:3001/api/authors
 
 ###
@@ -86,10 +110,10 @@ POST http://localhost:3001/api/readinglists HTTP/1.1
 Content-Type: application/json
 
 {
-  "blogId": 1,
-  "userId": 3
+  "blogId": 4,
+  "userId": 2
 }
 
 ### 
 
-GET http://localhost:3001/api/users/1
+GET http://localhost:3001/api/users/2

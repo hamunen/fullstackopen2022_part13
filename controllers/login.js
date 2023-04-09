@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const router = require('express').Router()
 
 const { SECRET } = require('../util/config')
-const User = require('../models/user')
+const { User, ActiveSession } = require('../models')
 
 router.post('/', async (request, response) => {
   const body = request.body
@@ -33,6 +33,11 @@ router.post('/', async (request, response) => {
   }
 
   const token = jwt.sign(userForToken, SECRET)
+
+  // delete any previous active sessions
+  ActiveSession.destroy({ where: { userId: user.id } })
+
+  await ActiveSession.create({ userId: user.id, token })
 
   response.status(200).send({ token, username: user.username, name: user.name })
 })

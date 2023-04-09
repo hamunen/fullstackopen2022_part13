@@ -32,6 +32,13 @@ User.init(
     sequelize,
     underscored: true,
     modelName: 'user',
+    scopes: {
+      nonDisabled: {
+        where: {
+          disabled: false,
+        },
+      },
+    },
   }
 )
 

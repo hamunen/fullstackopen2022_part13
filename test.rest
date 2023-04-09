@@ -117,3 +117,13 @@ Content-Type: application/json
 ### 
 
 GET http://localhost:3001/api/users/2
+
+###
+
+PUT http://localhost:3001/api/readinglists/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RndXlAbWljcm9zb2Z0LmNvbSIsImlkIjoxLCJpYXQiOjE2ODEwNDQ5MDV9.3LnHqk6be8rkgj4Uhm61rITbLYdpdQNkh_fs-KkNC6U
+
+{
+  "read": true
+}

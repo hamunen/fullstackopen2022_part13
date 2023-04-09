@@ -27,7 +27,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc
 
 ###
 
-DELETE http://localhost:3001/api/blogs/6 HTTP/1.1
+DELETE http://localhost:3001/api/blogs/7 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RndXlAbWljcm9zb2Z0LmNvbSIsImlkIjoxLCJpYXQiOjE2ODEwMzg5MTd9.AgmOAJsb3torh99OxNIVYovu13U7I3tvhRQljIMPrhM
 
 ###
 

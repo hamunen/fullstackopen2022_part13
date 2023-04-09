@@ -53,10 +53,17 @@ router.put('/:id', blogFinder, async (req, res) => {
   res.json(req.blog)
 })
 
-router.delete('/:id', blogFinder, async (req, res) => {
-  if (req.blog) {
-    await req.blog.destroy()
-  }
+router.delete('/:id', blogFinder, tokenExtractor, async (req, res) => {
+  const user = await User.findByPk(req.decodedToken.id)
+
+  if (!req.blog) return res.status(404).end()
+  if (req.blog.userId !== user.id)
+    return res
+      .status(403)
+      .json({ error: "Hey, you can't delete someone else's blog :(" })
+
+  await req.blog.destroy()
+
   res.status(204).end()
 })
 

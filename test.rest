@@ -20,7 +20,7 @@ Content-Type: application/json
 
 POST http://localhost:3001/api/blogs HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RndXlAbWljcm9zb2Z0LmNvbSIsImlkIjoxLCJpYXQiOjE2ODEwMzg5MTd9.AgmOAJsb3torh99OxNIVYovu13U7I3tvhRQljIMPrhM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RndXlAbWljcm9zb2Z0LmNvbSIsImlkIjoxLCJpYXQiOjE2ODEwNDQ5MDV9.3LnHqk6be8rkgj4Uhm61rITbLYdpdQNkh_fs-KkNC6U
 
 {
   "author": "Alf",
@@ -32,7 +32,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc
 ###
 
 DELETE http://localhost:3001/api/blogs/7 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RndXlAbWljcm9zb2Z0LmNvbSIsImlkIjoxLCJpYXQiOjE2ODEwMzg5MTd9.AgmOAJsb3torh99OxNIVYovu13U7I3tvhRQljIMPrhM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RndXlAbWljcm9zb2Z0LmNvbSIsImlkIjoxLCJpYXQiOjE2ODEwNDQ5MDV9.3LnHqk6be8rkgj4Uhm61rITbLYdpdQNkh_fs-KkNC6U
 
 ###
 
@@ -53,7 +53,7 @@ POST http://localhost:3001/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-  "username": "testguy",
+  "username": "testguy@microsoft.com",
   "name": "Test Guy"
 }
 
